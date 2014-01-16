@@ -1,21 +1,20 @@
 {
-  "name": "generator-backbone-mocha",
+  "name": "generator-m-mocha",
   "version": "0.0.2",
   "description": "A generator for Yeoman",
   "keywords": [
     "yeoman-generator"
   ],
-  "homepage": "https://github.com/revathskumar/generator-backbone-mocha",
-  "bugs": "https://github.com/revathskumar/generator-backbone-mocha/issues",
+  "homepage": "https://github.com/mwaylabs/generator-m-mocha",
+  "bugs": "https://github.com/mwaylabs/generator-m-mocha/issues",
   "author": {
-    "name": "Revath S Kumar",
-    "email": "rsk@revathskumar.com",
-    "url": "https://github.com/revathskumar"
+    "name": "M-Way Labs",
+    "url": "https://github.com/mwaylabs"
   },
   "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/revathskumar/generator-backbone-mocha.git"
+    "url": "git://github.com/mwaylabs/generator-m-mocha.git"
   },
   "scripts": {
     "test": "mocha --reporter spec"

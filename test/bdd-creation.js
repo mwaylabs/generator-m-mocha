@@ -5,7 +5,7 @@ var path    = require('path');
 var helpers = require('yeoman-generator').test;
 
 
-describe('backbone-mocha generator : BDD', function () {
+describe('m-mocha generator : BDD', function () {
   beforeEach(function (done) {
     helpers.testDirectory(path.join(__dirname, 'temp'), function (err) {
       if (err) {
@@ -17,7 +17,7 @@ describe('backbone-mocha generator : BDD', function () {
   });
 
   it('creates model', function (done) {
-    this.model = helpers.createGenerator('backbone-mocha:model', [
+    this.model = helpers.createGenerator('m-mocha:model', [
       '../../model'
       ], ['temp']);
     this.model.options.ui = 'bdd';
@@ -31,7 +31,7 @@ describe('backbone-mocha generator : BDD', function () {
   });
 
   it('creates collection', function(done){
-    this.collection = helpers.createGenerator('backbone-mocha:collection', [
+    this.collection = helpers.createGenerator('m-mocha:collection', [
       '../../collection'
       ], ['temp']);
     this.collection.options.ui = 'bdd';
@@ -45,7 +45,7 @@ describe('backbone-mocha generator : BDD', function () {
   });
 
   it('creates view', function(done){
-    this.view = helpers.createGenerator('backbone-mocha:view', [
+    this.view = helpers.createGenerator('m-mocha:view', [
       '../../view'
       ], ['temp']);
     this.view.options.ui = 'bdd'
@@ -59,7 +59,7 @@ describe('backbone-mocha generator : BDD', function () {
   });
 
   it('creates router', function(done){
-    this.router = helpers.createGenerator('backbone-mocha:router', [
+    this.router = helpers.createGenerator('m-mocha:router', [
       '../../router'
       ], ['temp']);
     this.router.options.ui = 'bdd'
@@ -67,6 +67,20 @@ describe('backbone-mocha generator : BDD', function () {
       helpers.assertFiles([
         ['test/routers/temp.spec.js',
         /describe\(\'Temp Router\'/]
+      ]);
+      done();
+    });
+  });
+
+  it('creates controller', function(done){
+    this.controller = helpers.createGenerator('m-mocha:controller', [
+      '../../controller'
+      ], ['temp']);
+    this.controller.options.ui = 'bdd'
+    this.controller.run({}, function () {
+      helpers.assertFiles([
+        ['test/controllers/temp.spec.js',
+        /describe\(\'Temp Controller\'/]
       ]);
       done();
     });

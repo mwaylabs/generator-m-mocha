@@ -4,7 +4,7 @@
 var path    = require('path');
 var helpers = require('yeoman-generator').test;
 
-describe('backbone-mocha generator : BDD : CoffeeScript', function () {
+describe('m-mocha generator : BDD : CoffeeScript', function () {
   beforeEach(function (done) {
     helpers.testDirectory(path.join(__dirname, 'temp'), function (err) {
       if (err) {
@@ -16,7 +16,7 @@ describe('backbone-mocha generator : BDD : CoffeeScript', function () {
   });
 
   it('creates model', function (done) {
-    this.model = helpers.createGenerator('backbone-mocha:model', [
+    this.model = helpers.createGenerator('m-mocha:model', [
       '../../model'
     ], ['temp'], {ui: 'bdd', coffee: true});
 
@@ -30,7 +30,7 @@ describe('backbone-mocha generator : BDD : CoffeeScript', function () {
   });
 
   it('creates collection', function (done) {
-    this.collection = helpers.createGenerator('backbone-mocha:collection', [
+    this.collection = helpers.createGenerator('m-mocha:collection', [
       '../../collection'
     ], ['temp'], {ui: 'bdd', coffee: true});
 
@@ -44,7 +44,7 @@ describe('backbone-mocha generator : BDD : CoffeeScript', function () {
   });
 
   it('creates view', function (done) {
-    this.view = helpers.createGenerator('backbone-mocha:view', [
+    this.view = helpers.createGenerator('m-mocha:view', [
       '../../view'
     ], ['temp'], {ui: 'bdd', coffee: true});
 
@@ -58,7 +58,7 @@ describe('backbone-mocha generator : BDD : CoffeeScript', function () {
   });
 
   it('creates router', function (done) {
-    this.router = helpers.createGenerator('backbone-mocha:router', [
+    this.router = helpers.createGenerator('m-mocha:router', [
       '../../router'
     ], ['temp'], {ui: 'bdd', coffee: true});
 
