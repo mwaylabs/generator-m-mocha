@@ -1,6 +1,6 @@
 {
   "name": "generator-m-mocha",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A generator for Yeoman",
   "keywords": [
     "yeoman-generator"
@@ -29,7 +29,7 @@
     "yo": ">=1.0.0"
   },
   "engines": {
-    "node": ">=0.8.0",
+    "node": ">=0.10.0"
     "npm": ">=1.2.10"
   },
   "licenses": [

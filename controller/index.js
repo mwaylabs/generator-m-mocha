@@ -6,7 +6,7 @@ var scriptBase = require('../script-base');
 var BackboneMochaGenerator = module.exports = function (args, options, config) {
   scriptBase.apply(this, arguments);
 
-  this.mkdir('test/controller');
+  this.mkdir('test/controllers');
   this.destFile = path.join('test/controllers', this.fileName());
 };
 
